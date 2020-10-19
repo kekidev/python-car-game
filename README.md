@@ -1,2 +1,2 @@
-I gave up 
-10/19/2020
+# THIS IS MY FIRST PYTHON GAME 
+# - 10/19/2020
