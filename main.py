@@ -15,11 +15,11 @@ pygame.mixer.init()
 
 # Basics
 backgroundmusic = pygame.mixer.music.load(
-    r'C:\Users\baeja\Documents\Python Scripts\cargame\assets\backgroundmusic.mp3')
+    r'./assets/backgroundmusic.mp3')
 pygame.mixer.music.play(-1)
 
 icon = pygame.image.load(
-    r'C:\Users\baeja\Documents\Python Scripts\cargame\assets\prof.png')
+    r'./assets/prof.png')
 screenx = 800
 screeny = 600
 screen = pygame.display.set_mode((screenx, screeny))
@@ -28,21 +28,21 @@ pygame.display.set_icon(icon)
 # Img files
 
 PLAYER = pygame.image.load(
-    r'C:\Users\baeja\Documents\Python Scripts\cargame\assets\CAR.png')
+    r'./assets/CAR.png')
 ROAD = pygame.image.load(
-    r"C:\Users\baeja\Documents\Python Scripts\cargame\assets\road.png")
+    r"./assets/road.png")
 EXPLOSION = pygame.image.load(
-    r'C:\Users\baeja\Documents\Python Scripts\cargame\assets\explosion.png')
+    r'./assets/explosion.png')
 ROCK = pygame.image.load(
-    r'C:\Users\baeja\Documents\Python Scripts\cargame\assets\rock.png')
+    r'./assets/rock.png')
 ROCK2 = pygame.image.load(
-    r'C:\Users\baeja\Documents\Python Scripts\cargame\assets\rock2.png'
+    r'./assets/rock2.png'
 )
 ROCK3 = pygame.image.load(
-    r'C:\Users\baeja\Documents\Python Scripts\cargame\assets\rock3.png'
+    r'./assets/rock3.png'
 )
 FOREST = pygame.image.load(
-    r'C:\Users\baeja\Documents\Python Scripts\cargame\assets\forest.png')
+    r'./assets/forest.png')
 
 # TODO: hit count 시스템 만들고 label 추가해서 게임 오버 그런거 만들고 화면 오른쪽 상단에 datetime 써서 시간 표시하는거 만들기, 그리고 방해물 더 만들기 
 
@@ -101,7 +101,7 @@ def main():
         if isCollision(rockx, rocky, player_x, player_y):
             load_image(EXPLOSION, player_x - 50, player_y)
             explosionmusic = pygame.mixer.Sound(
-                r'C:\Users\baeja\Documents\Python Scripts\cargame\assets\Explosion.wav')
+                r'./assets/Explosion.wav')
             explosionmusic.play()
             rocky = -500
             rockx = random.randint(140, 615)
@@ -109,7 +109,7 @@ def main():
         if isCollision(rock2x, rock2y, player_x, player_y):
             load_image(EXPLOSION, player_x - 50, player_y)
             explosionmusic = pygame.mixer.Sound(
-                r'C:\Users\baeja\Documents\Python Scripts\cargame\assets\Explosion.wav')
+                r'./assets/Explosion.wav')
             explosionmusic.play()
             rock2y = -300
             rock2x = random.randint(140, 615)
@@ -117,7 +117,7 @@ def main():
         if isCollision(rock3x, rock3y, player_x, player_y):
             load_image(EXPLOSION, player_x - 50, player_y)
             explosionmusic = pygame.mixer.Sound(
-                r'C:\Users\baeja\Documents\Python Scripts\cargame\assets\Explosion.wav')
+                r'./assets/Explosion.wav')
             explosionmusic.play()
             rock3y = -400
             rock3x = random.randint(140, 615)
